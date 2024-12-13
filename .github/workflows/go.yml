@@ -40,8 +40,6 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: hordos/worcflowhomework
-
           images: hordos/golang-worcflowhomework
 
       - name: Build and push Docker Image
