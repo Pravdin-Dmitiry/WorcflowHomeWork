@@ -39,7 +39,7 @@ func (s ParcelService) Register(client int, address string) (Parcel, error) {
 	}
 
 	id, err := s.store.Add(parcel)
-	
+
 	if err != nil {
 		return parcel, err
 	}
@@ -54,6 +54,7 @@ func (s ParcelService) Register(client int, address string) (Parcel, error) {
 
 func (s ParcelService) PrintClientParcels(client int) error {
 	parcels, err := s.store.GetByClient(client)
+
 	if err != nil {
 		return err
 	}
